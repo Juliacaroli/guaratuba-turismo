@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praias - Turismo em Guaratuba</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="praias">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">📍</div>
+                    <div class="logo-text">
+                        <h1>Turismo em Guaratuba</h1>
+                        <p>Paraná - Brasil</p>
+                    </div>
+                </a>
+
+                <nav class="nav">
+                    <a href="praias.html">Praias</a>
+                    <a href="pontos-turisticos.html">Pontos Turísticos</a>
+                    <a href="gastronomia.html">Gastronomia</a>
+                </nav>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">✕</button>
+        <nav class="mobile-nav">
+            <a href="praias.html">Praias</a>
+            <a href="pontos-turisticos.html">Pontos Turísticos</a>
+            <a href="gastronomia.html">Gastronomia</a>
+        </nav>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>
+                Praias de
+                <span class="gradient-text">Guaratuba</span>
+            </h1>
+            <p>
+                Descubra as mais belas praias do litoral paranaense, cada uma com sua personalidade única e belezas naturais incomparáveis.
+            </p>
+        </div>
+    </section>
+
+    <!-- Beaches Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-2" id="beachesGrid">
+                <!-- Praia Central -->
+                <div class="card fade-in">
+                    <div class="beach-card-layout">
+                        <div class="beach-image-container">
+                            <img src="images/praia-central.jpg" alt="Praia Central" class="card-image beach-image">
+                            <div class="beach-badges">
+                                <span class="badge badge-success">Fácil</span>
+                                <span class="badge badge-danger">👥 Alta</span>
+                            </div>
+                        </div>
+                        <div class="card-content beach-content">
+                            <h3 class="card-title beach-title">Praia Central</h3>
+                            <p class="card-description">A principal praia de Guaratuba, com extensa faixa de areia dourada e mar calmo. Ideal para famílias com crianças e prática de esportes aquáticos.</p>
+                            
+                            <div class="beach-info">
+                                <div class="beach-time">
+                                    ☀️ <span>Melhor horário:</span> Manhã e tarde
+                                </div>
+                            </div>
+
+                            <div class="beach-features">
+                                <h4>Características:</h4>
+                                <div class="tags-container">
+                                    <span class="tag">Salva-vidas</span>
+                                    <span class="tag">Estacionamento</span>
+                                    <span class="tag">Restaurantes</span>
+                                    <span class="tag">Aluguel de equipamentos</span>
+                                </div>
+                            </div>
+
+                            <div class="beach-activities">
+                                <h4>Atividades:</h4>
+                                <div class="tags-container">
+                                    <span class="badge badge-primary activity-tag">Natação</span>
+                                    <span class="badge badge-primary activity-tag">Vôlei de praia</span>
+                                    <span class="badge badge-primary activity-tag">Stand-up paddle</span>
+                                    <span class="badge badge-primary activity-tag">Caminhada</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Praia de Caieiras -->
+                <div class="card fade-in">
+                    <div class="beach-card-layout">
+                        <div class="beach-image-container">
+                            <img src="images/praia-caieiras.jpg" alt="Praia de Caieiras" class="card-image beach-image">
+                            <div class="beach-badges">
+                                <span class="badge badge-warning">Moderada</span>
+                                <span class="badge badge-success">👥 Baixa</span>
+                            </div>
+                        </div>
+                        <div class="card-content beach-content">
+                            <h3 class="card-title beach-title">Praia de Caieiras</h3>
+                            <p class="card-description">Praia mais selvagem e preservada, cercada por vegetação nativa. Perfeita para quem busca tranquilidade e contato com a natureza.</p>
+                            
+                            <div class="beach-info">
+                                <div class="beach-time">
+                                    ☀️ <span>Melhor horário:</span> Manhã
+                                </div>
+                            </div>
+
+                            <div class="beach-features">
+                                <h4>Características:</h4>
+                                <div class="tags-container">
+                                    <span class="tag">Natureza preservada</span>
+                                    <span class="tag">Trilhas</span>
+                                    <span class="tag">Pesca</span>
+                                    <span class="tag">Observação de aves</span>
+                                </div>
+                            </div>
+
+                            <div class="beach-activities">
+                                <h4>Atividades:</h4>
+                                <div class="tags-container">
+                                    <span class="badge badge-primary activity-tag">Pesca</span>
+                                    <span class="badge badge-primary activity-tag">Trilha ecológica</span>
+                                    <span class="badge badge-primary activity-tag">Fotografia</span>
+                                    <span class="badge badge-primary activity-tag">Relaxamento</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Praia do Morro -->
+                <div class="card fade-in">
+                    <div class="beach-card-layout">
+                        <div class="beach-image-container">
+                            <img src="images/praia-do-morro.jpg" alt="Praia do Morro" class="card-image beach-image">
+                            <div class="beach-badges">
+                                <span class="badge badge-warning">Moderada</span>
+                                <span class="badge badge-warning">👥 Média</span>
+                            </div>
+                        </div>
+                        <div class="card-content beach-content">
+                            <h3 class="card-title beach-title">Praia do Morro</h3>
+                            <p class="card-description">Localizada próxima ao Morro do Cristo, oferece uma vista espetacular e ondas ideais para surf iniciante.</p>
+                            
+                            <div class="beach-info">
+                                <div class="beach-time">
+                                    ☀️ <span>Melhor horário:</span> Tarde
+                                </div>
+                            </div>
+
+                            <div class="beach-features">
+                                <h4>Características:</h4>
+                                <div class="tags-container">
+                                    <span class="tag">Vista panorâmica</span>
+                                    <span class="tag">Ondas para surf</span>
+                                    <span class="tag">Trilha para o morro</span>
+                                    <span class="tag">Pôr do sol</span>
+                                </div>
+                            </div>
+
+                            <div class="beach-activities">
+                                <h4>Atividades:</h4>
+                                <div class="tags-container">
+                                    <span class="badge badge-primary activity-tag">Surf</span>
+                                    <span class="badge badge-primary activity-tag">Escalada</span>
+                                    <span class="badge badge-primary activity-tag">Contemplação</span>
+                                    <span class="badge badge-primary activity-tag">Fotografia</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Praia Brejatuba -->
+                <div class="card fade-in">
+                    <div class="beach-card-layout">
+                        <div class="beach-image-container">
+                            <img src="images/praia-brejatuba.jpg" alt="Praia Brejatuba" class="card-image beach-image">
+                            <div class="beach-badges">
+                                <span class="badge badge-success">Fácil</span>
+                                <span class="badge badge-warning">👥 Média</span>
+                            </div>
+                        </div>
+                        <div class="card-content beach-content">
+                            <h3 class="card-title beach-title">Praia Brejatuba</h3>
+                            <p class="card-description">Praia familiar com águas calmas e boa infraestrutura. Popular entre os locais e turistas que buscam comodidade.</p>
+                            
+                            <div class="beach-info">
+                                <div class="beach-time">
+                                    ☀️ <span>Melhor horário:</span> Manhã e tarde
+                                </div>
+                            </div>
+
+                            <div class="beach-features">
+                                <h4>Características:</h4>
+                                <div class="tags-container">
+                                    <span class="tag">Infraestrutura completa</span>
+                                    <span class="tag">Águas calmas</span>
+                                    <span class="tag">Playground</span>
+                                    <span class="tag">Ciclovia</span>
+                                </div>
+                            </div>
+
+                            <div class="beach-activities">
+                                <h4>Atividades:</h4>
+                                <div class="tags-container">
+                                    <span class="badge badge-primary activity-tag">Natação</span>
+                                    <span class="badge badge-primary activity-tag">Ciclismo</span>
+                                    <span class="badge badge-primary activity-tag">Playground</span>
+                                    <span class="badge badge-primary activity-tag">Piquenique</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Praia do Coroados -->
+                <div class="card fade-in">
+                    <div class="beach-card-layout">
+                        <div class="beach-image-container">
+                            <img src="images/praia-coroados.jpg" alt="Praia do Coroados" class="card-image beach-image">
+                            <div class="beach-badges">
+                                <span class="badge badge-success">Fácil</span>
+                                <span class="badge badge-success">👥 Baixa</span>
+                            </div>
+                        </div>
+                        <div class="card-content beach-content">
+                            <h3 class="card-title beach-title">Praia do Coroados</h3>
+                            <p class="card-description">Praia extensa com formações rochosas interessantes. Ideal para longas caminhadas e coleta de conchas.</p>
+                            
+                            <div class="beach-info">
+                                <div class="beach-time">
+                                    ☀️ <span>Melhor horário:</span> Manhã
+                                </div>
+                            </div>
+
+                            <div class="beach-features">
+                                <h4>Características:</h4>
+                                <div class="tags-container">
+                                    <span class="tag">Formações rochosas</span>
+                                    <span class="tag">Coleta de conchas</span>
+                                    <span class="tag">Caminhadas</span>
+                                    <span class="tag">Pesca de praia</span>
+                                </div>
+                            </div>
+
+                            <div class="beach-activities">
+                                <h4>Atividades:</h4>
+                                <div class="tags-container">
+                                    <span class="badge badge-primary activity-tag">Caminhada</span>
+                                    <span class="badge badge-primary activity-tag">Coleta de conchas</span>
+                                    <span class="badge badge-primary activity-tag">Pesca</span>
+                                    <span class="badge badge-primary activity-tag">Meditação</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Praia Alegre -->
+                <div class="card fade-in">
+                    <div class="beach-card-layout">
+                        <div class="beach-image-container">
+                            <img src="images/praia-alegre.jpg" alt="Praia Alegre" class="card-image beach-image">
+                            <div class="beach-badges">
+                                <span class="badge badge-success">Fácil</span>
+                                <span class="badge badge-danger">👥 Alta</span>
+                            </div>
+                        </div>
+                        <div class="card-content beach-content">
+                            <h3 class="card-title beach-title">Praia Alegre</h3>
+                            <p class="card-description">Pequena praia com ambiente descontraído e frequentada principalmente por jovens. Boa para socializar e praticar esportes.</p>
+                            
+                            <div class="beach-info">
+                                <div class="beach-time">
+                                    ☀️ <span>Melhor horário:</span> Tarde e noite
+                                </div>
+                            </div>
+
+                            <div class="beach-features">
+                                <h4>Características:</h4>
+                                <div class="tags-container">
+                                    <span class="tag">Ambiente jovem</span>
+                                    <span class="tag">Esportes de praia</span>
+                                    <span class="tag">Música</span>
+                                    <span class="tag">Food trucks</span>
+                                </div>
+                            </div>
+
+                            <div class="beach-activities">
+                                <h4>Atividades:</h4>
+                                <div class="tags-container">
+                                    <span class="badge badge-primary activity-tag">Vôlei</span>
+                                    <span class="badge badge-primary activity-tag">Futebol de areia</span>
+                                    <span class="badge badge-primary activity-tag">Música</span>
+                                    <span class="badge badge-primary activity-tag">Socialização</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beach Guide Section -->
+    <section class="section bg-white">
+        <div class="container text-center">
+            <h3 class="section-title">Guia das Praias</h3>
+            <p class="section-description">
+                Informações importantes para aproveitar ao máximo sua visita às praias de Guaratuba.
+            </p>
+            <div class="grid grid-3">
+                <div class="info-card">
+                    <div class="info-icon" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);">🌊</div>
+                    <h4 class="info-title">Condições do Mar</h4>
+                    <p class="info-description">
+                        Verifique sempre as condições do mar e respeite as orientações dos salva-vidas para sua segurança.
+                    </p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon" style="background: linear-gradient(135deg, #eab308, #f97316);">☀️</div>
+                    <h4 class="info-title">Proteção Solar</h4>
+                    <p class="info-description">
+                        Use protetor solar, chapéu e óculos escuros. O sol do litoral pode ser mais intenso que o esperado.
+                    </p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon" style="background: linear-gradient(135deg, #10b981, #14b8a6);">🏖️</div>
+                    <h4 class="info-title">Infraestrutura</h4>
+                    <p class="info-description">
+                        Algumas praias possuem melhor infraestrutura que outras. Planeje-se de acordo com suas necessidades.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="logo-icon" style="width: 2rem; height: 2rem;">📍</div>
+                        <h4>Turismo Guaratuba</h4>
+                    </div>
+                    <p>Descubra as belezas naturais de Guaratuba, onde o mar encontra a mata atlântica em perfeita harmonia.</p>
+                </div>
+                <div class="footer-section">
+                    <h5>Contato</h5>
+                    <div class="footer-contact">📞 <span>(41) 99999-9999</span></div>
+                    <div class="footer-contact">✉️ <span>contato@turismoguaratuba.com.br</span></div>
+                    <div class="footer-contact">📍 <span>Centro, Guaratuba - PR</span></div>
+                </div>
+                <div class="footer-section">
+                    <h5>Redes Sociais</h5>
+                    <div class="footer-social">
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="Facebook">📘</a>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.875rem; color: #94a3b8;">
+                        Siga-nos para acompanhar as novidades e dicas de turismo em Guaratuba.
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Turismo Guaratuba. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

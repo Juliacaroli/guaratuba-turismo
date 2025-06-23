@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo em Guaratuba - PR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">📍</div>
+                    <div class="logo-text">
+                        <h1>Turismo em Guaratuba</h1>
+                        <p>Paraná - Brasil</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav">
+                    <a href="praias.html">Praias</a>
+                    <a href="pontos-turisticos.html">Pontos Turísticos</a>
+                    <a href="gastronomia.html">Gastronomia</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">✕</button>
+        <nav class="mobile-nav">
+            <a href="praias.html">Praias</a>
+            <a href="pontos-turisticos.html">Pontos Turísticos</a>
+            <a href="gastronomia.html">Gastronomia</a>
+        </nav>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>
+                Descubra
+                <span class="gradient-text"> Guaratuba</span>
+            </h2>
+            <p>
+                Onde o mar encontra a natureza exuberante do Paraná. Explore praias paradisíacas, 
+                paisagens deslumbrantes e a rica cultura local.
+            </p>
+            <a href="pontos-turisticos.html" class="btn btn-primary">
+                Explorar Destinos
+            </a>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center mb-8">
+                <h3 class="section-title">Explore Guaratuba</h3>
+                <p class="section-description">
+                    Clique nas seções abaixo para descobrir tudo o que nossa cidade tem a oferecer.
+                </p>
+            </div>
+
+            <div class="grid grid-3">
+                <a href="praias.html" class="card">
+                    <img src="images/hero-praias.jpg" alt="Praias Paradisíacas" class="card-image">
+                    <div class="card-content">
+                        <h4 class="card-title">Praias Paradisíacas</h4>
+                        <p class="card-description">Descubra as mais belas praias do litoral paranaense</p>
+                    </div>
+                </a>
+
+                <a href="pontos-turisticos.html" class="card">
+                    <img src="images/hero-pontos-turisticos.jpg" alt="Pontos Turísticos" class="card-image">
+                    <div class="card-content">
+                        <h4 class="card-title">Pontos Turísticos</h4>
+                        <p class="card-description">Explore os principais marcos e atrações da cidade</p>
+                    </div>
+                </a>
+
+                <a href="gastronomia.html" class="card">
+                    <img src="images/hero-gastronomia.jpg" alt="Gastronomia Local" class="card-image">
+                    <div class="card-content">
+                        <h4 class="card-title">Gastronomia Local</h4>
+                        <p class="card-description">Saboreie os melhores pratos e restaurantes</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="grid grid-3">
+                <div class="info-card">
+                    <div class="info-icon" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);">
+                        🏖️
+                    </div>
+                    <h4 class="info-title">6+ Praias</h4>
+                    <p class="info-description">
+                        Praias para todos os gostos, desde as mais movimentadas até as mais selvagens
+                    </p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon" style="background: linear-gradient(135deg, #10b981, #14b8a6);">
+                        🏛️
+                    </div>
+                    <h4 class="info-title">10+ Pontos Turísticos</h4>
+                    <p class="info-description">
+                        Marcos históricos, mirantes e atrações naturais imperdíveis
+                    </p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon" style="background: linear-gradient(135deg, #f97316, #ef4444);">
+                        🍽️
+                    </div>
+                    <h4 class="info-title">15+ Restaurantes</h4>
+                    <p class="info-description">
+                        Gastronomia variada com frutos do mar frescos e pratos típicos
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="logo-icon" style="width: 2rem; height: 2rem;">📍</div>
+                        <h4>Turismo Guaratuba</h4>
+                    </div>
+                    <p>
+                        Descubra as belezas naturais de Guaratuba, onde o mar encontra a mata atlântica 
+                        em perfeita harmonia.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h5>Contato</h5>
+                    <div class="footer-contact">
+                        📞 <span>(41) 99999-9999</span>
+                    </div>
+                    <div class="footer-contact">
+                        ✉️ <span>contato@turismoguaratuba.com.br</span>
+                    </div>
+                    <div class="footer-contact">
+                        📍 <span>Centro, Guaratuba - PR</span>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h5>Redes Sociais</h5>
+                    <div class="footer-social">
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="Facebook">📘</a>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.875rem; color: #94a3b8;">
+                        Siga-nos para acompanhar as novidades e dicas de turismo em Guaratuba.
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2024 Turismo Guaratuba. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

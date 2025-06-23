@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pontos Turísticos - Turismo em Guaratuba</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="pontos-turisticos">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">📍</div>
+                    <div class="logo-text">
+                        <h1>Turismo em Guaratuba</h1>
+                        <p>Paraná - Brasil</p>
+                    </div>
+                </a>
+
+                <nav class="nav">
+                    <a href="praias.html">Praias</a>
+                    <a href="pontos-turisticos.html">Pontos Turísticos</a>
+                    <a href="gastronomia.html">Gastronomia</a>
+                </nav>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">✕</button>
+        <nav class="mobile-nav">
+            <a href="praias.html">Praias</a>
+            <a href="pontos-turisticos.html">Pontos Turísticos</a>
+            <a href="gastronomia.html">Gastronomia</a>
+        </nav>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>
+                Pontos Turísticos de
+                <span class="gradient-text">Guaratuba</span>
+            </h1>
+            <p>
+                Explore os principais marcos históricos, mirantes e atrações naturais que fazem de Guaratuba um destino único no litoral paranaense.
+            </p>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="section" style="padding-top: 2rem; padding-bottom: 2rem;">
+        <div class="container">
+            <div class="filters" id="categoryFilters">
+                <button class="filter-btn active" onclick="filterSpots('Todos', this)">Todos</button>
+                <button class="filter-btn" onclick="filterSpots('Mirante', this)">Mirante</button>
+                <button class="filter-btn" onclick="filterSpots('Histórico', this)">Histórico</button>
+                <button class="filter-btn" onclick="filterSpots('Natural', this)">Natural</button>
+                <button class="filter-btn" onclick="filterSpots('Cultural', this)">Cultural</button>
+                <button class="filter-btn" onclick="filterSpots('Transporte Histórico', this)">Transporte Histórico</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tourist Spots Grid -->
+    <section class="section" style="padding-top: 2rem;">
+        <div class="container">
+            <div class="grid grid-3" id="spotsGrid">
+                <!-- Morro do Cristo -->
+                <div class="card fade-in spot-card" data-category="Mirante">
+                    <div class="spot-image-container">
+                        <img src="images/morro-do-cristo.jpg" alt="Morro do Cristo" class="card-image">
+                        <div class="spot-badges">
+                            <span class="badge badge-primary">🏔️ Mirante</span>
+                            <span class="badge badge-warning">Moderada</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Morro do Cristo</h3>
+                        <p class="card-description">Mirante com vista panorâmica de 360° da cidade e baía. Local perfeito para contemplar o pôr do sol e fazer fotos incríveis da região.</p>
+                        
+                        <div class="spot-info">
+                            <div class="info-item">🕒 Tempo de visita: 1-2 horas</div>
+                            <div class="info-item">📷 Melhor horário: Pôr do sol (17h-19h)</div>
+                        </div>
+
+                        <div class="highlights">
+                            <h4>Destaques:</h4>
+                            <div class="tags-container">
+                                <span class="tag">Vista panorâmica</span>
+                                <span class="tag">Pôr do sol</span>
+                                <span class="tag">Fotografia</span>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary spot-details-btn" onclick="openSpotModal('morro-cristo')">
+                            📍 Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Igreja Matriz São Pedro -->
+                <div class="card fade-in spot-card" data-category="Histórico">
+                    <div class="spot-image-container">
+                        <img src="images/igreja-matriz.jpg" alt="Igreja Matriz São Pedro" class="card-image">
+                        <div class="spot-badges">
+                            <span class="badge badge-primary">🏛️ Histórico</span>
+                            <span class="badge badge-success">Fácil</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Igreja Matriz São Pedro</h3>
+                        <p class="card-description">Marco histórico da cidade construído em 1940, com arquitetura tradicional e importância cultural para a comunidade local.</p>
+                        
+                        <div class="spot-info">
+                            <div class="info-item">🕒 Tempo de visita: 30 minutos</div>
+                            <div class="info-item">📷 Melhor horário: Manhã (9h-11h)</div>
+                        </div>
+
+                        <div class="highlights">
+                            <h4>Destaques:</h4>
+                            <div class="tags-container">
+                                <span class="tag">Arquitetura histórica</span>
+                                <span class="tag">Arte sacra</span>
+                                <span class="tag">Cultura local</span>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary spot-details-btn" onclick="openSpotModal('igreja-matriz')">
+                            📍 Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Ferry Boat -->
+                <div class="card fade-in spot-card" data-category="Transporte Histórico">
+                    <div class="spot-image-container">
+                        <img src="images/ferry-boat.jpg" alt="Ferry Boat" class="card-image">
+                        <div class="spot-badges">
+                            <span class="badge badge-primary">⛵ Transporte Histórico</span>
+                            <span class="badge badge-success">Fácil</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Ferry Boat</h3>
+                        <p class="card-description">Travessia tradicional que conecta Guaratuba a Matinhos, oferecendo uma experiência única aos visitantes com vista da baía.</p>
+                        
+                        <div class="spot-info">
+                            <div class="info-item">🕒 Tempo de visita: 30 minutos (travessia)</div>
+                            <div class="info-item">📷 Melhor horário: Manhã (8h-10h)</div>
+                        </div>
+
+                        <div class="highlights">
+                            <h4>Destaques:</h4>
+                            <div class="tags-container">
+                                <span class="tag">Vista da baía</span>
+                                <span class="tag">Experiência histórica</span>
+                                <span class="tag">Transporte tradicional</span>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary spot-details-btn" onclick="openSpotModal('ferry-boat')">
+                            📍 Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Baía de Guaratuba -->
+                <div class="card fade-in spot-card" data-category="Natural">
+                    <div class="spot-image-container">
+                        <img src="images/baia-guaratuba.jpg" alt="Baía de Guaratuba" class="card-image">
+                        <div class="spot-badges">
+                            <span class="badge badge-primary">🌿 Natural</span>
+                            <span class="badge badge-success">Fácil</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Baía de Guaratuba</h3>
+                        <p class="card-description">Encontro do rio com o mar, formando uma paisagem única. Ideal para passeios de barco, pesca esportiva e contemplação.</p>
+                        
+                        <div class="spot-info">
+                            <div class="info-item">🕒 Tempo de visita: 2-4 horas</div>
+                            <div class="info-item">📷 Melhor horário: Manhã (7h-10h)</div>
+                        </div>
+
+                        <div class="highlights">
+                            <h4>Destaques:</h4>
+                            <div class="tags-container">
+                                <span class="tag">Encontro rio-mar</span>
+                                <span class="tag">Passeios de barco</span>
+                                <span class="tag">Pesca</span>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary spot-details-btn" onclick="openSpotModal('baia-guaratuba')">
+                            📍 Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mercado Municipal -->
+                <div class="card fade-in spot-card" data-category="Cultural">
+                    <div class="spot-image-container">
+                        <img src="images/mercado-municipal.jpg" alt="Mercado Municipal" class="card-image">
+                        <div class="spot-badges">
+                            <span class="badge badge-primary">🎭 Cultural</span>
+                            <span class="badge badge-success">Fácil</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Mercado Municipal</h3>
+                        <p class="card-description">Centro de comércio local com produtos típicos, artesanatos e frutos do mar frescos. Experiência autêntica da cultura guaratubense.</p>
+                        
+                        <div class="spot-info">
+                            <div class="info-item">🕒 Tempo de visita: 1 hora</div>
+                            <div class="info-item">📷 Melhor horário: Manhã (6h-12h)</div>
+                        </div>
+
+                        <div class="highlights">
+                            <h4>Destaques:</h4>
+                            <div class="tags-container">
+                                <span class="tag">Produtos locais</span>
+                                <span class="tag">Artesanato</span>
+                                <span class="tag">Frutos do mar</span>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary spot-details-btn" onclick="openSpotModal('mercado-municipal')">
+                            📍 Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Parque Nacional Saint-Hilaire -->
+                <div class="card fade-in spot-card" data-category="Natural">
+                    <div class="spot-image-container">
+                        <img src="images/parque-saint-hilaire.jpg" alt="Parque Nacional Saint-Hilaire" class="card-image">
+                        <div class="spot-badges">
+                            <span class="badge badge-primary">🌿 Natural</span>
+                            <span class="badge badge-warning">Moderada a Difícil</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Parque Nacional Saint-Hilaire</h3>
+                        <p class="card-description">Área de preservação com trilhas ecológicas, cachoeiras e rica biodiversidade da Mata Atlântica.</p>
+                        
+                        <div class="spot-info">
+                            <div class="info-item">🕒 Tempo de visita: 3-5 horas</div>
+                            <div class="info-item">📷 Melhor horário: Manhã (8h-12h)</div>
+                        </div>
+
+                        <div class="highlights">
+                            <h4>Destaques:</h4>
+                            <div class="tags-container">
+                                <span class="tag">Trilhas ecológicas</span>
+                                <span class="tag">Cachoeiras</span>
+                                <span class="tag">Mata Atlântica</span>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary spot-details-btn" onclick="openSpotModal('parque-saint-hilaire')">
+                            📍 Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Tourist Spot Details -->
+    <div class="modal" id="spotModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle"></h2>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="logo-icon" style="width: 2rem; height: 2rem;">📍</div>
+                        <h4>Turismo Guaratuba</h4>
+                    </div>
+                    <p>Descubra as belezas naturais de Guaratuba, onde o mar encontra a mata atlântica em perfeita harmonia.</p>
+                </div>
+                <div class="footer-section">
+                    <h5>Contato</h5>
+                    <div class="footer-contact">📞 <span>(41) 99999-9999</span></div>
+                    <div class="footer-contact">✉️ <span>contato@turismoguaratuba.com.br</span></div>
+                    <div class="footer-contact">📍 <span>Centro, Guaratuba - PR</span></div>
+                </div>
+                <div class="footer-section">
+                    <h5>Redes Sociais</h5>
+                    <div class="footer-social">
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="Facebook">📘</a>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.875rem; color: #94a3b8;">
+                        Siga-nos para acompanhar as novidades e dicas de turismo em Guaratuba.
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Turismo Guaratuba. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

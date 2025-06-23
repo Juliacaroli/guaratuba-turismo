@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastronomia - Turismo em Guaratuba</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="gastronomia">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">📍</div>
+                    <div class="logo-text">
+                        <h1>Turismo em Guaratuba</h1>
+                        <p>Paraná - Brasil</p>
+                    </div>
+                </a>
+
+                <nav class="nav">
+                    <a href="praias.html">Praias</a>
+                    <a href="pontos-turisticos.html">Pontos Turísticos</a>
+                    <a href="gastronomia.html">Gastronomia</a>
+                </nav>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">✕</button>
+        <nav class="mobile-nav">
+            <a href="praias.html">Praias</a>
+            <a href="pontos-turisticos.html">Pontos Turísticos</a>
+            <a href="gastronomia.html">Gastronomia</a>
+        </nav>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>
+                Gastronomia de
+                <span class="gradient-text">Guaratuba</span>
+            </h1>
+            <p>
+                Descubra os sabores únicos da nossa cidade, desde frutos do mar frescos até pratos tradicionais paranaenses.
+            </p>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="section" style="padding-top: 2rem; padding-bottom: 2rem;">
+        <div class="container">
+            <div class="filters" id="categoryFilters">
+                <button class="filter-btn active" onclick="filterRestaurants('Todos', this)">Todos</button>
+                <button class="filter-btn" onclick="filterRestaurants('Frutos do Mar', this)">Frutos do Mar</button>
+                <button class="filter-btn" onclick="filterRestaurants('Pizzaria', this)">Pizzaria</button>
+                <button class="filter-btn" onclick="filterRestaurants('Café & Lanches', this)">Café & Lanches</button>
+                <button class="filter-btn" onclick="filterRestaurants('Churrascaria', this)">Churrascaria</button>
+                <button class="filter-btn" onclick="filterRestaurants('Sorveteria', this)">Sorveteria</button>
+                <button class="filter-btn" onclick="filterRestaurants('Comida Caseira', this)">Comida Caseira</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurants Grid -->
+    <section class="section" style="padding-top: 2rem;">
+        <div class="container">
+            <div class="grid grid-3" id="restaurantsGrid">
+                <!-- Restaurante Maré Alta -->
+                <div class="card fade-in restaurant-card" data-category="Frutos do Mar">
+                    <div class="restaurant-image-container">
+                        <img src="images/restaurante-mare-alta.jpg" alt="Restaurante Maré Alta" class="card-image">
+                        <div class="restaurant-badges">
+                            <span class="badge badge-primary">🍽️ Frutos do Mar</span>
+                            <span class="badge rating-badge">⭐ 4.8</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="restaurant-header">
+                            <h3 class="card-title">Restaurante Maré Alta</h3>
+                            <span class="price-tag">$$</span>
+                        </div>
+                        <p class="card-description">Especializado em frutos do mar frescos com vista para a baía. Famoso pelo camarão na moranga e moqueca de peixe.</p>
+                        
+                        <div class="restaurant-info">
+                            <div class="info-item">📍 Av. Beira Mar, 123 - Centro</div>
+                            <div class="info-item">📞 (41) 3472-1234</div>
+                            <div class="info-item">🕒 11h às 23h</div>
+                        </div>
+
+                        <div class="specialties">
+                            <h4>Especialidades:</h4>
+                            <div class="tags-container">
+                                <span class="tag">Moqueca de Peixe</span>
+                                <span class="tag">Camarão na Moranga</span>
+                                <span class="tag">Casquinha de Caranguejo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizzaria Bella Vista -->
+                <div class="card fade-in restaurant-card" data-category="Pizzaria">
+                    <div class="restaurant-image-container">
+                        <img src="images/pizzaria-bella-vista.jpg" alt="Pizzaria Bella Vista" class="card-image">
+                        <div class="restaurant-badges">
+                            <span class="badge badge-primary">🍽️ Pizzaria</span>
+                            <span class="badge rating-badge">⭐ 4.6</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="restaurant-header">
+                            <h3 class="card-title">Pizzaria Bella Vista</h3>
+                            <span class="price-tag">$</span>
+                        </div>
+                        <p class="card-description">Pizzas artesanais com massa fina e ingredientes selecionados. Ambiente familiar com vista para o mar.</p>
+                        
+                        <div class="restaurant-info">
+                            <div class="info-item">📍 Rua das Palmeiras, 456 - Brejatuba</div>
+                            <div class="info-item">📞 (41) 3472-5678</div>
+                            <div class="info-item">🕒 18h às 24h</div>
+                        </div>
+
+                        <div class="specialties">
+                            <h4>Especialidades:</h4>
+                            <div class="tags-container">
+                                <span class="tag">Pizza Margherita</span>
+                                <span class="tag">Pizza de Camarão</span>
+                                <span class="tag">Pizza Portuguesa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Café da Praia -->
+                <div class="card fade-in restaurant-card" data-category="Café & Lanches">
+                    <div class="restaurant-image-container">
+                        <img src="images/cafe-da-praia.jpg" alt="Café da Praia" class="card-image">
+                        <div class="restaurant-badges">
+                            <span class="badge badge-primary">☕ Café & Lanches</span>
+                            <span class="badge rating-badge">⭐ 4.7</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="restaurant-header">
+                            <h3 class="card-title">Café da Praia</h3>
+                            <span class="price-tag">$</span>
+                        </div>
+                        <p class="card-description">Café aconchegante com vista para a praia. Serve cafés especiais, açaí e lanches naturais.</p>
+                        
+                        <div class="restaurant-info">
+                            <div class="info-item">📍 Praia Central, s/n - Orla</div>
+                            <div class="info-item">📞 (41) 3472-9012</div>
+                            <div class="info-item">🕒 6h às 22h</div>
+                        </div>
+
+                        <div class="specialties">
+                            <h4>Especialidades:</h4>
+                            <div class="tags-container">
+                                <span class="tag">Açaí na Tigela</span>
+                                <span class="tag">Sanduíche Natural</span>
+                                <span class="tag">Café Especial</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Churrascaria Gaúcha -->
+                <div class="card fade-in restaurant-card" data-category="Churrascaria">
+                    <div class="restaurant-image-container">
+                        <img src="images/churrascaria-gaucha.jpg" alt="Churrascaria Gaúcha" class="card-image">
+                        <div class="restaurant-badges">
+                            <span class="badge badge-primary">🥩 Churrascaria</span>
+                            <span class="badge rating-badge">⭐ 4.5</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="restaurant-header">
+                            <h3 class="card-title">Churrascaria Gaúcha</h3>
+                            <span class="price-tag">$$</span>
+                        </div>
+                        <p class="card-description">Rodízio de carnes nobres com buffet completo. Ambiente climatizado e atendimento diferenciado.</p>
+                        
+                        <div class="restaurant-info">
+                            <div class="info-item">📍 Av. 29 de Abril, 789 - Centro</div>
+                            <div class="info-item">📞 (41) 3472-3456</div>
+                            <div class="info-item">🕒 11h30 às 15h / 18h30 às 23h</div>
+                        </div>
+
+                        <div class="specialties">
+                            <h4>Especialidades:</h4>
+                            <div class="tags-container">
+                                <span class="tag">Picanha</span>
+                                <span class="tag">Costela</span>
+                                <span class="tag">Linguiça Artesanal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sorveteria Tropical -->
+                <div class="card fade-in restaurant-card" data-category="Sorveteria">
+                    <div class="restaurant-image-container">
+                        <img src="images/sorveteria-tropical.jpg" alt="Sorveteria Tropical" class="card-image">
+                        <div class="restaurant-badges">
+                            <span class="badge badge-primary">🍦 Sorveteria</span>
+                            <span class="badge rating-badge">⭐ 4.9</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="restaurant-header">
+                            <h3 class="card-title">Sorveteria Tropical</h3>
+                            <span class="price-tag">$</span>
+                        </div>
+                        <p class="card-description">Sorvetes artesanais com sabores tropicais únicos. Especialidade em picolés de frutas regionais.</p>
+                        
+                        <div class="restaurant-info">
+                            <div class="info-item">📍 Rua XV de Novembro, 321 - Centro</div>
+                            <div class="info-item">📞 (41) 3472-7890</div>
+                            <div class="info-item">🕒 10h às 23h</div>
+                        </div>
+
+                        <div class="specialties">
+                            <h4>Especialidades:</h4>
+                            <div class="tags-container">
+                                <span class="tag">Sorvete de Caju</span>
+                                <span class="tag">Picolé de Açaí</span>
+                                <span class="tag">Milk Shake Tropical</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurante do Porto -->
+                <div class="card fade-in restaurant-card" data-category="Comida Caseira">
+                    <div class="restaurant-image-container">
+                        <img src="images/restaurante-do-porto.jpg" alt="Restaurante do Porto" class="card-image">
+                        <div class="restaurant-badges">
+                            <span class="badge badge-primary">🏠 Comida Caseira</span>
+                            <span class="badge rating-badge">⭐ 4.4</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="restaurant-header">
+                            <h3 class="card-title">Restaurante do Porto</h3>
+                            <span class="price-tag">$</span>
+                        </div>
+                        <p class="card-description">Comida caseira com tempero especial. Pratos fartos e preços acessíveis em ambiente familiar.</p>
+                        
+                        <div class="restaurant-info">
+                            <div class="info-item">📍 Rua do Porto, 654 - Porto</div>
+                            <div class="info-item">📞 (41) 3472-2468</div>
+                            <div class="info-item">🕒 11h às 15h / 17h às 22h</div>
+                        </div>
+
+                        <div class="specialties">
+                            <h4>Especialidades:</h4>
+                            <div class="tags-container">
+                                <span class="tag">Peixe Grelhado</span>
+                                <span class="tag">Feijoada</span>
+                                <span class="tag">Moqueca de Camarão</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="section bg-white">
+        <div class="container text-center">
+            <h3 class="section-title">Sabores Únicos de Guaratuba</h3>
+            <p class="section-description">
+                Nossa gastronomia é uma mistura perfeita entre os frutos do mar frescos do litoral e os sabores 
+                tradicionais paranaenses. Cada restaurante oferece uma experiência única, desde pratos sofisticados 
+                até comida caseira com muito carinho.
+            </p>
+            <div class="grid grid-3">
+                <div class="info-card">
+                    <div class="info-icon" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);">🐟</div>
+                    <h4 class="info-title">Frutos do Mar Frescos</h4>
+                    <p class="info-description">Pescados diariamente por pescadores locais</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon" style="background: linear-gradient(135deg, #10b981, #14b8a6);">🍽️</div>
+                    <h4 class="info-title">Pratos Tradicionais</h4>
+                    <p class="info-description">Receitas passadas de geração em geração</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon" style="background: linear-gradient(135deg, #f97316, #ef4444);">☕</div>
+                    <h4 class="info-title">Ambiente Acolhedor</h4>
+                    <p class="info-description">Hospitalidade típica do povo paranaense</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="logo-icon" style="width: 2rem; height: 2rem;">📍</div>
+                        <h4>Turismo Guaratuba</h4>
+                    </div>
+                    <p>Descubra as belezas naturais de Guaratuba, onde o mar encontra a mata atlântica em perfeita harmonia.</p>
+                </div>
+                <div class="footer-section">
+                    <h5>Contato</h5>
+                    <div class="footer-contact">📞 <span>(41) 99999-9999</span></div>
+                    <div class="footer-contact">✉️ <span>contato@turismoguaratuba.com.br</span></div>
+                    <div class="footer-contact">📍 <span>Centro, Guaratuba - PR</span></div>
+                </div>
+                <div class="footer-section">
+                    <h5>Redes Sociais</h5>
+                    <div class="footer-social">
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="Facebook">📘</a>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.875rem; color: #94a3b8;">
+                        Siga-nos para acompanhar as novidades e dicas de turismo em Guaratuba.
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Turismo Guaratuba. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
